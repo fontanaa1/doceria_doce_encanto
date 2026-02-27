@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.cdnfonts.com/css/chellin" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Doceria Doce Encanto</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ea92a5',
+                        secondary: '#fb923c'
+                    },
+                    fontFamily: {
+                    chellin: ['Chellin', 'cursive'],
+                }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-orange-50">
+
+    <!-- HEADER -->
+<header class="relative h-[300px] sm:h-[400px] w-full overflow-hidden flex flex-col justify-between p-4 bg-black">
+    
+    <div class="absolute inset-0 z-0">
+        <img src="./assets/imgs/Doceria.png" 
+             alt="Background Doces" 
+             class="w-full h-full object-cover opacity-60">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+    </div>
+
+    <div class="relative z-10 flex items-center justify-between w-full max-w-6xl mx-auto">
+        
+        <button id="btn-mobile" class="text-white p-2 focus:outline-none">
+            <svg id="icon-open" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="icon-close" class="hidden w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M6 6l12 12M6 18L18 6" />
+            </svg>
+    
+        </button>
+
+        <button class="bg-[#ffbc0d] hover:bg-[#e6a800] text-black font-bold py-2 px-6 rounded-md transition-colors text-sm sm:text-base">
+            Entrar
+        </button>
+    </div>
+
+    <div class="relative z-10 text-center mb-6">
+        <h1 class="text-white text-2xl sm:text-4xl font-extrabold mb-6 px-4">
+            Como você quer seu doce hoje?
+        </h1>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+            <button class="flex items-center justify-center gap-3 bg-white w-full sm:w-56 py-3 rounded-xl shadow-lg hover:bg-gray-100 transition-all transform active:scale-95">
+                <span class="text-2xl">🍰</span>
+                <span class="font-bold text-gray-800">Peça e Retire</span>
+            </button>
+            
+            <button class="flex items-center justify-center gap-3 bg-white w-full sm:w-56 py-3 rounded-xl shadow-lg hover:bg-gray-100 transition-all transform active:scale-95">
+                <span class="text-2xl">🛵</span>
+                <span class="font-bold text-gray-800">DoceDelivery</span>
+            </button>
+        </div>
+    </div>
+
+</header>
+
+    <!-- MENU MOBILE -->
+    <nav id="menu-mobile" class="hidden bg-white px-6 py-4 shadow-md">
+        <a href="#cardapio" class="block font-bold">Cardápio</a>
+    </nav>
+
+    <!-- BANNER -->
+    <section class="p-6 text-center mt-8">
+        <h2 class="text-5xl font-chellin text-primary">Os melhores doces da cidade</h2>
+        <p class="mt-3 text-gray-600">Feitos com carinho e muito chocolate - Doce Encanto ❤️</p>
+
+        <section class="max-w-6xl mx-auto px-4 mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    
+    <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+        <img src="https://png.pngtree.com/png-clipart/20240607/original/pngtree-fresh-assorted-homemade-gourmet-glazed-donuts-png-image_15264389.png" alt="Delicioso Donuts" class="w-full h-64 object-cover">
+        <div class="p-4 bg-white">
+            <h4 class="font-bold text-lg text-primary">Donuts</h4>
+            <p class="text-gray-600">Donuts recheado com Creme de Avelã.</p>
+        </div>
+    </div>
+    
+    <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/047/842/674/small_2x/black-forest-cake-with-chocolate-sponge-cake-cherries-and-whipped-cream-png.png" alt="Delicioso Bolo de Chocolate" class="w-full h-64 object-cover">
+        <div class="p-4 bg-white">
+            <h4 class="font-bold text-lg text-primary">Bolo Floresta Negra</h4>
+            <p class="text-gray-600">Deliciosa combinação de camadas de pão de ló de chocolate, chantilly, cerejas e licor de cereja.</p>
+        </div>
+    </div>
+
+    <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+        <img src="https://png.pngtree.com/png-clipart/20241114/original/pngtree-oreo-chocolate-cupcake-png-image_17022858.png" alt="Delicioso Bolo de Chocolate" class="w-full h-64 object-cover">
+        <div class="p-4 bg-white">
+            <h4 class="font-bold text-lg text-primary">Cupcake de Oreo</h4>
+            <p class="text-gray-600">Delicioso Cupcake com recheio e cobertura cremosa de Oreo.  </p>
+        </div>
+    </div>
+
+     <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+        <img src="https://png.pngtree.com/png-clipart/20240910/original/pngtree-deliciously-sweet-strawberry-tart-dessert-png-image_15980915.png" alt="Delicioso Bolo de Chocolate" class="w-full h-64 object-cover">
+        <div class="p-4 bg-white">
+            <h4 class="font-bold text-lg text-primary">Torta de Morango</h4>
+            <p class="text-gray-600">Extraordinária Torta de Morango  </p>
+        </div>
+    </div>
+    
+    </section>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="px-6 mt-10">
+
+        <h2 class="text-2xl font-bold text-center mb-6">Cardápio</h2>
+
+        <!-- BOTÕES CATEGORIA -->
+        <div id="nav-categorias"
+            class="flex gap-2 overflow-x-auto whitespace-nowrap pb-2 snap-x">
+
+            <button data-cat="bolos"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-primary text-white text-sm font-bold">
+                Bolos
+            </button>
+
+            <button data-cat="cupcakes"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-gray-200 text-sm font-bold">
+                Cupcakes
+            </button>
+
+            <button data-cat="salgadinhos"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-gray-200 text-sm font-bold">
+                Doces & Saladinhos
+            </button>
+
+            <button data-cat="sobremesas"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-gray-200 text-sm font-bold">
+                Sobremesas Especiais
+            </button>
+
+            <button data-cat="bebidas"
+                class="btn-cat snap-start px-4 py-2 rounded-full bg-gray-200 text-sm font-bold">
+                Bebidas
+            </button>
+
+        </div>
+
+        <!-- BOLOS -->
+        <div id="cat-bolos" class="categoria mt-8 space-y-6">
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Bolo Floresta Negra</h3>
+                    <p class="text-sm text-gray-600">Deliciosa combinação de camadas de pão de ló de chocolate, chantilly, cerejas e licor de cereja.</p>
+                </div>
+                <span class="font-bold">R$ 85,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Bolo de Chocolate</h3>
+                    <p class="text-sm text-gray-600">Recheio cremoso e cobertura especial</p>
+                </div>
+                <span class="font-bold">R$ 45,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Bolo Red Velvet</h3>
+                    <p class="text-sm text-gray-600">Massa macia com cream cheese</p>
+                </div>
+                <span class="font-bold">R$ 55,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Bolo de Morango com Ninho</h3>
+                    <p class="text-sm text-gray-600">Massa branca, creme de leite Ninho e morangos frescos.</p>
+                </div>
+                <span class="font-bold">R$ 70,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Bolo Prestígio</h3>
+                    <p class="text-sm text-gray-600">Massa de chocolate com recheio de coco cremoso.</p>
+                </div>
+                <span class="font-bold">R$ 60,00</span>
+            </div>
+
+        </div>
+
+        <!-- CUPCAKES -->
+        <div id="cat-cupcakes" class="categoria hidden mt-8 space-y-6">
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Cupcake Oreo</h3>
+                    <p class="text-sm text-gray-600">Cobertura cremosa com pedaços de Oreo</p>
+                </div>
+                <span class="font-bold">R$ 12,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Cupcake Morango</h3>
+                    <p class="text-sm text-gray-600">Recheado com geleia artesanal</p>
+                </div>
+                <span class="font-bold">R$ 10,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Cupcake Chocolate Belga</h3>
+                    <p class="text-sm text-gray-600">Cobertura cremosa com raspas de chocolate meio amargo.</p>
+                </div>
+                <span class="font-bold">R$ 12,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Cupcake Limão Siciliano</h3>
+                    <p class="text-sm text-gray-600">Leve e refrescante, com cobertura cremosa cítrica.</p>
+                </div>
+                <span class="font-bold">R$ 11,00</span>
+            </div>
+
+        </div>
+
+        <!-- SOBREMESAS ESPECIAIS -->
+        <div id="cat-sobremesas" class="categoria hidden mt-8 space-y-6">
+
+           <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Torta de Morango</h3>
+                    <p class="text-sm text-gray-600">Deliciosa Torta de Morango.</p>
+                </div>
+                <span class="font-bold">R$ 75,90</span>
+            </div>
+           
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Brownie Gourmet</h3>
+                    <p class="text-sm text-gray-600">Brownie artesanal com casquinha crocante e interior macio.</p>
+                </div>
+                <span class="font-bold">R$ 8,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Taça da Felicidade (Morango)</h3>
+                    <p class="text-sm text-gray-600">Camadas de mousse, morango fresco e brigadeiro.</p>
+                </div>
+                <span class="font-bold">R$ 22,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Banoffee</h3>
+                    <p class="text-sm text-gray-600">Base crocante, doce de leite, banana e chantilly.</p>
+                </div>
+                <span class="font-bold">R$ 18,00</span>
+            </div>
+
+             <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Pudim Tradicional</h3>
+                    <p class="text-sm text-gray-600">Clássico pudim de leite condensado com calda caramelizada.</p>
+                </div>
+                <span class="font-bold">R$ 12,00</span>
+            </div>
+
+        </div>
+
+         <!-- DOCES & SALGADINHOS -->
+        <div id="cat-salgadinhos" class="categoria hidden mt-8 space-y-6">
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Brigadeiro Gourmet (unid.)</h3>
+                    <p class="text-sm text-gray-600">Feito com chocolate nobre e granulado belga.</p>
+                </div>
+                <span class="font-bold">R$ 3,50</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Beijinho (unid.)</h3>
+                    <p class="text-sm text-gray-600">Tradicional com coco fresco e toque especial.</p>
+                </div>
+                <span class="font-bold">R$ 3,50</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Bomba de Morango</h3>
+                    <p class="text-sm text-gray-600">Recheada com creme branco e morango fresco.</p>
+                </div>
+                <span class="font-bold">R$ 14,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Croissant Doce</h3>
+                    <p class="text-sm text-gray-600">Recheado com chocolate ou creme de avelã</p>
+                </div>
+                <span class="font-bold">R$ 16,00</span>
+            </div>
+
+
+        </div>
+
+        <!-- BEBIDAS -->
+        <div id="cat-bebidas" class="categoria hidden mt-8 space-y-6">
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Capuccino</h3>
+                    <p class="text-sm text-gray-600">Deliciosa bebida composta por café expresso, leite vaporizado e uma camada de espuma de leite</p>
+                </div>
+                <span class="font-bold">R$ 10,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Chocolate Quente</h3>
+                    <p class="text-sm text-gray-600">Cremoso e irresistível</p>
+                </div>
+                <span class="font-bold">R$ 15,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Refrigerante Lata</h3>
+                    <p class="text-sm text-gray-600">Coca Cola - Sprity - Fanta - Guaraná</p>
+                </div>
+                <span class="font-bold">R$ 6,00</span>
+            </div>
+
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold text-lg">Suco Natural (300ml)</h3>
+                    <p class="text-sm text-gray-600">Sabores: laranja, abacaxi ou morango.</p>
+                </div>
+                <span class="font-bold">R$ 10,00</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white text-center p-6 mt-16">
+        <p>📍 Rua Kopenhagen, 123 - São Paulo</p>
+        <p> (15) 98108-9666</p>
+        <p>📸 @doce_encanto</p>
+    </footer>
+
+    <!-- SCRIPT CATEGORIAS COM TOUCH AVANÇADO -->
+    <script>
+        const botoes = document.querySelectorAll('.btn-cat');
+        const categorias = document.querySelectorAll('.categoria');
+
+        let startX = 0;
+        let startY = 0;
+
+        function mudarCategoria(cat) {
+            categorias.forEach(sec => {
+                sec.classList.add('hidden');
+                if (sec.id === 'cat-' + cat) {
+                    sec.classList.remove('hidden');
+                }
+            });
+
+            botoes.forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-white');
+                btn.classList.add('bg-gray-200');
+                if (btn.dataset.cat === cat) {
+                    btn.classList.add('bg-primary', 'text-white');
+                    btn.classList.remove('bg-gray-200');
+                }
+            });
+        }
+
+        botoes.forEach(btn => {
+
+            btn.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                btn.classList.add('scale-95', 'opacity-80');
+            });
+
+            btn.addEventListener('touchend', (e) => {
+                btn.classList.remove('scale-95', 'opacity-80');
+
+                const endX = e.changedTouches[0].clientX;
+                const endY = e.changedTouches[0].clientY;
+
+                const deltaX = Math.abs(endX - startX);
+                const deltaY = Math.abs(endY - startY);
+
+                if (deltaX < 10 && deltaY < 10) {
+                    mudarCategoria(btn.dataset.cat);
+                }
+            });
+
+            btn.addEventListener('touchcancel', () => {
+                btn.classList.remove('scale-95', 'opacity-80');
+            });
+
+            btn.addEventListener('click', () => {
+                mudarCategoria(btn.dataset.cat);
+            });
+
+        });
+
+        // MENU HAMBURGUER
+        const btnMobile = document.getElementById('btn-mobile');
+        const menuMobile = document.getElementById('menu-mobile');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+
+        btnMobile.addEventListener('click', () => {
+            menuMobile.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
